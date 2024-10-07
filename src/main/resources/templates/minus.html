@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>引き算</title>
+</head>
+<body>
+    <h1>引き算</h1>
+    <form action="#" th:action="@{/minus}" method="post">
+        <input type="number" name="firstNumber" placeholder="最初の数字" required>
+        <span>-</span>
+        <input type="number" name="secondNumber" placeholder="次の数字" required>
+        <button type="submit">=</button>
+    </form>
+
+    <p th:if="${result != null}">
+        結果: <span th:text="${result}"></span>
+    </p>
+</body>
+</html>
